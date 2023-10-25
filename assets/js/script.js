@@ -107,3 +107,9 @@ const resultsContainer = document.getElementById('results');
 const submitContainer = document.getElementById('submit');
 const tryAgainContainer = document.getElementById('tryAgain');
 const revealAnswerContainer = document.getElementById('revealAnswer');
+
+
+// Event listners for buttons
+submitContainer.addEventListener('click', answerCheck);
+tryAgainContainer.addEventListener('click',retry);
+revealAnswerContainer.addEventListener('click', displayAnswer);
