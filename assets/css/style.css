@@ -1,0 +1,12 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins&display=swap');
+
+
+/* Body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../images/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
