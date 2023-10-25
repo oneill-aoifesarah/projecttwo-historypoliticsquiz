@@ -103,4 +103,7 @@ const quizData =[
 ];
 
 const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results')
+const resultsContainer = document.getElementById('results');
+const submitContainer = document.getElementById('submit');
+const tryAgainContainer = document.getElementById('tryAgain');
+const revealAnswerContainer = document.getElementById('revealAnswer');
