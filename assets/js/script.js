@@ -1,8 +1,8 @@
 // Quiz Questions, Multiple Choice, and Correct Answers
-const quizData =[
+const quizContent =[
     {
         question: 'Which country is known as the Hermit Kingdom?',
-        options: [
+        option: [
             'North Korea',
             'Senegal',
             'Myanmar',
@@ -12,7 +12,7 @@ const quizData =[
     },
     {
         question: 'What is the term for the political and economic theory of Karl Marx and Friedrich Engels that advocates for a classless society and the means of production owned by the community?',
-        options: [
+        option: [
             'Fascism',
             'Capitalism',
             'Socialism',
@@ -22,7 +22,7 @@ const quizData =[
     },
     {
         question: 'What is the international coalition of countries that opposes the use of chemical weapons and is known for its chemical weapons watchdog role?',
-        options: [
+        option: [
             'NATO',
             'Interpol',
             'UNICEF', 
@@ -32,7 +32,7 @@ const quizData =[
     },
     {
         question: 'What is the name of the historic peace agreement between Israel and the United Arab Emirates signed in 2020?',
-        options: [
+        option: [
             'Camp David Accords',
             'Oslo Accords', 
             'Abraham Accords',
@@ -42,7 +42,7 @@ const quizData =[
     },
     {
         question: 'Which city is considered the political and administrative capital of Saudi Arabia?',
-        options: [
+        option: [
             'Mecca',
             'Medina',
             'Jeddah',
@@ -52,7 +52,7 @@ const quizData =[
     },
     {
         question: 'Which treaty, signed in 1957, established the European Economic Community (EEC), a precursor to the EU?',
-        options: [
+        option: [
             'Maastricht Treaty',
             'Lisbon Treaty',
             'Treaty of Rome',
@@ -62,7 +62,7 @@ const quizData =[
     },
     {
         question: 'Who is the current President of the European Commission as of 2023?',
-        options: [
+        option: [
             'Ursula von der Leyen',
             'Jean-Claude Juncker',
             'Angela Merkel',
@@ -72,7 +72,7 @@ const quizData =[
     },
     {
         question: 'What is the term for the peace agreement signed in 1998 that helped bring an end to the conflict in Northern Ireland?',
-        options: [
+        option: [
             'Good Friday Agreement',
             'Bloody Sunday Agreement',
             'Cork Accord',
@@ -82,7 +82,7 @@ const quizData =[
     },
     {
         question: 'What was the title of the famous document through which King Henry VIII sought an annulment of his marriage to Catherine of Aragon?',
-        options: [
+        option: [
             'Declaration of Independence',
             'Magna Carta',
             'Act of Supremacy',
@@ -92,7 +92,7 @@ const quizData =[
     },
     {
         question: 'Which amendment to the U.S. Constitution grants women the right to vote?',
-        options: [
+        option: [
             '1st Amendment',
             '14th Amendment',
             '19th Amendment',
@@ -101,6 +101,14 @@ const quizData =[
         answer: '19th Amendment',
     },
 ];
+// Track of the current question being displayed in the quiz
+let currentQuestion = 0;
+
+// Track the user's score in the quiz
+let score = 0;
+
+// Collate details of incorrect answers
+let incorrectAnswers = [];
 
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
@@ -108,6 +116,66 @@ const submitContainer = document.getElementById('submit');
 const tryAgainContainer = document.getElementById('tryAgain');
 const revealAnswerContainer = document.getElementById('revealAnswer');
 
+// Function to display the questions and answers
+function displayQuestion() {
+    const questionContent = quizContent[currentQuestion];
+
+    const questionElement = document.createElement('div');
+    questionElement.className = 'question';
+    questionElement.innerHTML = questionContent.question;
+
+    const optionsElement = document.createElement('div');
+    optionsElement.className = 'options';
+
+    for (let i = 0; i < questionContent.option.length; i++) {
+        const option = document.createElement('label');
+        option.className = 'option';
+
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.name = 'quiz';
+        radio.value = questionContent.option[i];
+
+        const optionText = document.createTextNode(questionContent.option[i]);
+
+        option.appendChild(radio);
+        option.appendChild(optionText);
+        optionsElement.appendChild(option);
+    }
+
+    quizContainer.innerHTML = '';
+    quizContainer.appendChild(questionElement);
+    quizContainer.appendChild(optionsElement);
+}
+
+// Function to check the answer given and track scores
+function checkAnswer() {
+    const selectedOption = document.querySelector('input[name="quiz"]:checked');
+    if (selectedOption) {
+        const answer = selectedOption.value;
+        if (answer === quizContent[currentQuestion].answer) {
+            score++;
+        } else {
+            incorrectAnswers.push({
+                question: quizContent[currentQuestion].question,
+                incorrectAnswer: answer,
+                correctAnswer: quizContent[currentQuestion].answer,
+            });
+        }
+        currentQuestion++;
+        selectedOption.checked = false;
+        if (currentQuestion < quizContent.length) {
+            displayQuestion();
+        } else {
+            displayResult();
+        }
+    }
+}
+
+
+// Addition of function to check the answer provide and to track scores
+// Addition of function to display the final result
+// Addition of function to allow user to retry the quiz
 
 // Event listners for buttons
 submitContainer.addEventListener('click', answerCheck);

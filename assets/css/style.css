@@ -33,5 +33,13 @@ h1 {
 }
 
 /* Question styles */
+.question {
+
+}
+
+/* Option styles */
+.option {
+    display:block;
+}
 /* Button styles */
 /* Results styles */
