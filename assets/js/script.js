@@ -117,7 +117,7 @@ const tryAgainContainer = document.getElementById('tryAgain');
 const revealAnswerContainer = document.getElementById('revealAnswer');
 
 // Function to display the questions and answers
-function displayQuestion() {
+function showQuestion() {
     const questionContent = quizContent[currentQuestion];
 
     const questionElement = document.createElement('div');
@@ -165,7 +165,7 @@ function checkAnswer() {
         currentQuestion++;
         selectedOption.checked = false;
         if (currentQuestion < quizContent.length) {
-            displayQuestion();
+            showQuestion();
         } else {
             showResults();
         }
@@ -175,7 +175,7 @@ function checkAnswer() {
 
 // Addition of function to check the answer provide and to track scores
 // Addition of function to display the answers for the questions the user got wrong
-function showResults() {
+function revealAnswer() {
     quizContainer.style.display = 'none';
     submitContainer.style.display = 'none';
     revealAnswerContainer.style.display = 'none';
@@ -183,7 +183,14 @@ function showResults() {
 
 // Addition of function to display the final result
 // Addition of function to allow user to retry the quiz
-
+function retry() {
+    quizContainer.style.display = 'block';
+    submitContainer.style.display = 'inline-block';
+    revealAnswerContainer = 'none';
+    tryAgainContainer.style.display = 'none';
+    resultsContainer.innerHTML = '';
+    showQuestion ();
+    }
 
 // Event listners for buttons
 submitContainer.addEventListener('click', answerCheck);
@@ -191,4 +198,4 @@ tryAgainContainer.addEventListener('click',retry);
 revealAnswerContainer.addEventListener('click', revealAnswer);
 
 // Quiz begins with the first question displayed
-displayQuestion();
+showQuestion();
