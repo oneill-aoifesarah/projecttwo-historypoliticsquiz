@@ -1,5 +1,5 @@
 // Quiz Questions, Multiple Choice, and Correct Answers
-const quizContent =[
+const quizContent = [
     {
         question: 'Which country is known as the Hermit Kingdom?',
         option: [
@@ -25,7 +25,7 @@ const quizContent =[
         option: [
             'NATO',
             'Interpol',
-            'UNICEF', 
+            'UNICEF',
             'OPCW'
         ],
         answer: 'OPCW',
@@ -34,7 +34,7 @@ const quizContent =[
         question: 'What is the name of the historic peace agreement between Israel and the United Arab Emirates signed in 2020?',
         option: [
             'Camp David Accords',
-            'Oslo Accords', 
+            'Oslo Accords',
             'Abraham Accords',
             'Peace of Paris'
         ],
@@ -180,10 +180,13 @@ function showResult() {
     revealAnswerContainer.style.display = 'inline-block';
     tryAgainContainer.style.display = 'inline-block';
     resultsContainer.innerHTML = `Your score: ${score} out of ${quizContent.length}!`;
-    }
+}
 
 // Addition of function to allow user to retry the quiz
 function retry() {
+    currentQuestion = 0;
+    score = 0;
+    incorrectAnswers = [];
     quizContainer.style.display = 'block';
     submitContainer.style.display = 'inline-block';
     revealAnswerContainer.style.display = 'none';
@@ -215,11 +218,11 @@ function revealAnswer() {
     <p>Wrong Answers:</p>
     ${incorrectAnswersHtml}
     `;
-} 
+}
 
-// Event listners for buttons
+// Event listeners for buttons
 submitContainer.addEventListener('click', answerCheck);
-tryAgainContainer.addEventListener('click',retry);
+tryAgainContainer.addEventListener('click', retry);
 revealAnswerContainer.addEventListener('click', revealAnswer);
 
 // Quiz begins with the first question displayed
