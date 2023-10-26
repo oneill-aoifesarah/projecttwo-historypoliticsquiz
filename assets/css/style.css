@@ -67,6 +67,10 @@ h1 {
 }
 
 /* Results styles */
+#results {
+    max-height: 300px;
+    overflow-y: auto;
+}
 .result {
     text-align: center;
 }

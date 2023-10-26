@@ -207,7 +207,6 @@ function retry() {
     resultsContainer.innerHTML = '';
     showQuestion();
 }
-
 // Addition of function to display the answers for the questions the user got wrong
 function revealAnswer() {
     quizContainer.style.display = 'none';
