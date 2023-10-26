@@ -181,3 +181,6 @@ function checkAnswer() {
 submitContainer.addEventListener('click', answerCheck);
 tryAgainContainer.addEventListener('click',retry);
 revealAnswerContainer.addEventListener('click', displayAnswer);
+
+// Quiz begins with the first question displayed
+displayQuestion();
