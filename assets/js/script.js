@@ -174,12 +174,12 @@ function answerCheck() {
     }
 }
 // Addition of display final results
-function displayResult() {
+function showResult() {
     quizContainer.style.display = 'none';
     submitContainer.style.display = 'none';
     revealAnswerContainer.style.display = 'inline-block';
     tryAgainContainer.style.display = 'inline-block';
-    resultsContainer.innerHTML = 'Your Score: ${score} out of ${quizContent.length}!';
+    resultsContainer.innerHTML = `Your score: ${score} out of ${quizContent.length}!`;
     }
 
 // Addition of function to allow user to retry the quiz
@@ -195,7 +195,7 @@ function retry() {
 // Addition of function to display the answers for the questions the user got wrong
 function revealAnswer() {
     quizContainer.style.display = 'none';
-    submitContainer.style display = 'none';
+    submitContainer.style.display = 'none';
     revealAnswerContainer.style.display = 'none';
     tryAgainContainer.style.display = 'inline-block';
 
@@ -211,7 +211,7 @@ function revealAnswer() {
     }
 
     resultsContainer.innerHTML = `
-    <p>Your score: ${score} out of ${quizContent.length}!</p>
+    <p>Your score: ${score} out of ${quizContent.length}</p>
     <p>Wrong Answers:</p>
     ${incorrectAnswersHtml}
     `;

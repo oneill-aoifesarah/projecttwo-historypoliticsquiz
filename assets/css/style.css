@@ -12,16 +12,17 @@ body {
     justify-content: center;
     display: flex;
     align-items: center;
+    height: 100vh;
 }
 
 /* Container styles */
 .container {
     text-align:center;
-    width:650px;
+    width:700px;
     padding: 25px;
     background-color: #FFFDFB;
-    margin-top: 100px;
-    box-shadow: 0 2px 3px;
+    margin-top: 30px;
+    box-shadow: 0 2px 3px rgb(rgb(255, 214, 164));
     border-radius: 15px;
 }
 
@@ -35,18 +36,22 @@ h1 {
 
 /* Question styles */
 .question {
-
+color: #f49c31;
+margin-bottom: 5px;
+font-weight: bold;
 }
 
 /* Option styles */
 .option {
     display:block;
+    margin-bottom: 10px;
+    margin-top: 12px;
 }
 
 /* Button styles */
 .button {
     font-family: 'Lato', sans-serif;
-    display: in-line-block;
+    display: inline-block;
     margin: 10px;
     padding: 10px 20px;
     background-color: #0881A3;
@@ -63,10 +68,9 @@ h1 {
 
 /* Results styles */
 .result {
-    text-align {
-        text-align: center;
+    text-align: center;
     }
-}
+
 /* Hide Class */
 .hide {
     display:none;
