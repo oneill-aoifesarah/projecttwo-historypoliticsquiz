@@ -16,6 +16,7 @@ body {
 
 /* Container styles */
 .container {
+    text-align:center;
     width:650px;
     padding: 25px;
     background-color: #FFFDFB;
@@ -42,4 +43,14 @@ h1 {
     display:block;
 }
 /* Button styles */
+.button {
+    display: in-line-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #0881A3;
+    color: #FFFDFB;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+}
 /* Results styles */
