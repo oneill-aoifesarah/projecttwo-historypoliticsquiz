@@ -126,13 +126,15 @@ function shuffleQuestions() {
     }
 }
 
-// Function to display the questions and answers
 function showQuestion() {
     const questionContent = quizContent[currentQuestion];
 
     const questionElement = document.createElement('div');
     questionElement.className = 'question';
     questionElement.innerHTML = questionContent.question;
+
+    const questionCounterElement = document.getElementById('questionCounter');
+    questionCounterElement.innerText = `Question ${currentQuestion + 1} of ${quizContent.length}`;
 
     const optionsElement = document.createElement('div');
     optionsElement.className = 'options';
@@ -154,6 +156,7 @@ function showQuestion() {
     }
 
     quizContainer.innerHTML = '';
+    quizContainer.appendChild(questionCounterElement); // Add question counter
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
 }
