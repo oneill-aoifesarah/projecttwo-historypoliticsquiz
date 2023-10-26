@@ -102,7 +102,7 @@ const quizContent = [
     },
 ];
 
-// Variable refrences container for quiz
+// Variable references container for quiz
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitContainer = document.getElementById('submit');
@@ -117,6 +117,14 @@ let score = 0;
 
 // Collate details of incorrect answers
 let incorrectAnswers = [];
+
+// Function to shuffle the quiz questions
+function shuffleQuestions() {
+    for (let i = quizContent.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [quizContent[i], quizContent[j]] = [quizContent[j], quizContent[i]];
+    }
+}
 
 // Function to display the questions and answers
 function showQuestion() {
@@ -173,6 +181,7 @@ function answerCheck() {
         }
     }
 }
+
 // Addition of display final results
 function showResult() {
     quizContainer.style.display = 'none';
@@ -187,6 +196,7 @@ function retry() {
     currentQuestion = 0;
     score = 0;
     incorrectAnswers = [];
+    shuffleQuestions();
     quizContainer.style.display = 'block';
     submitContainer.style.display = 'inline-block';
     revealAnswerContainer.style.display = 'none';
