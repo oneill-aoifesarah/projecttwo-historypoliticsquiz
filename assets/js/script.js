@@ -167,20 +167,28 @@ function checkAnswer() {
         if (currentQuestion < quizContent.length) {
             displayQuestion();
         } else {
-            displayResult();
+            showResults();
         }
     }
 }
 
 
 // Addition of function to check the answer provide and to track scores
+// Addition of function to display the answers for the questions the user got wrong
+function showResults() {
+    quizContainer.style.display = 'none';
+    submitContainer.style.display = 'none';
+    revealAnswerContainer.style.display = 'none';
+    tryAgainContainer.style.display = 'inline-block';
+
 // Addition of function to display the final result
 // Addition of function to allow user to retry the quiz
+
 
 // Event listners for buttons
 submitContainer.addEventListener('click', answerCheck);
 tryAgainContainer.addEventListener('click',retry);
-revealAnswerContainer.addEventListener('click', displayAnswer);
+revealAnswerContainer.addEventListener('click', revealAnswer);
 
 // Quiz begins with the first question displayed
 displayQuestion();
