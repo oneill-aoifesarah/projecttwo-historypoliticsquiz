@@ -149,7 +149,7 @@ function showQuestion() {
 }
 
 // Function to check the answer given and track scores
-function checkAnswer() {
+function answerCheck() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
     if (selectedOption) {
         const answer = selectedOption.value;
@@ -173,7 +173,13 @@ function checkAnswer() {
 }
 
 
-// Addition of function to check the answer provide and to track scores
+// Addition of function to check the answer provided and to track scores
+function showResults () {
+    quizContainer.style.display = 'none';
+    submitContainer.style.display ='none';
+    revealAnswerContainer.style.display ='innline-block';
+    tryAgainContainer.style.display= 'inline-block';
+}
 // Addition of function to display the answers for the questions the user got wrong
 function revealAnswer() {
     quizContainer.style.display = 'none';
@@ -182,6 +188,7 @@ function revealAnswer() {
     tryAgainContainer.style.display = 'inline-block';
 
 // Addition of function to display the final result
+function 
 // Addition of function to allow user to retry the quiz
 function retry() {
     quizContainer.style.display = 'block';
