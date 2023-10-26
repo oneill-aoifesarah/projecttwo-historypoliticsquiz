@@ -102,13 +102,12 @@ const quizContent = [
     },
 ];
 
-// Variable references container for the quiz
+// Variable references container for quiz
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitContainer = document.getElementById('submit');
 const tryAgainContainer = document.getElementById('tryAgain');
 const revealAnswerContainer = document.getElementById('revealAnswer');
-const landingPage = document.getElementById('landing-page'); // Add reference to the landing page container
 
 // Track of the current question being displayed in the quiz
 let currentQuestion = 0;
@@ -129,62 +128,61 @@ function shuffleQuestions() {
 
 // Function to display the questions and answers
 function showQuestion() {
-    if (currentQuestion < quizContent.length) {
-        const questionContent = quizContent[currentQuestion];
+    const questionContent = quizContent[currentQuestion];
 
-        const questionElement = document.createElement('div');
-        questionElement.className = 'question';
-        questionElement.innerHTML = questionContent.question;
+    const questionElement = document.createElement('div');
+    questionElement.className = 'question';
+    questionElement.innerHTML = questionContent.question;
 
-        const optionsElement = document.createElement('div');
-        optionsElement.className = 'options';
+    const optionsElement = document.createElement('div');
+    optionsElement.className = 'options';
 
-        for (let i = 0; i < questionContent.option.length; i++) {
-            const option = document.createElement('label');
-            option.className = 'option';
+    for (let i = 0; i < questionContent.option.length; i++) {
+        const option = document.createElement('label');
+        option.className = 'option';
 
-            const radio = document.createElement('input');
-            radio.type = 'radio';
-            radio.name = 'quiz';
-            radio.value = questionContent.option[i];
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.name = 'quiz';
+        radio.value = questionContent.option[i];
 
-            const optionText = document.createTextNode(questionContent.option[i]);
+        const optionText = document.createTextNode(questionContent.option[i]);
 
-            option.appendChild(radio);
-            option.appendChild(optionText);
-            optionsElement.appendChild(option);
-        }
-
-        quizContainer.innerHTML = '';
-        quizContainer.appendChild(questionElement);
-        quizContainer.appendChild(optionsElement);
-    } else {
-        showResult();
+        option.appendChild(radio);
+        option.appendChild(optionText);
+        optionsElement.appendChild(option);
     }
+
+    quizContainer.innerHTML = '';
+    quizContainer.appendChild(questionElement);
+    quizContainer.appendChild(optionsElement);
 }
 
 // Function to check the answer given and track scores
 function answerCheck() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
     if (selectedOption) {
-        const userAnswer = selectedOption.value.toLowerCase(); // Convert to lowercase
-        const correctAnswer = quizContent[currentQuestion].answer.toLowerCase(); // Convert to lowercase
-        if (userAnswer === correctAnswer) {
+        const answer = selectedOption.value;
+        if (answer === quizContent[currentQuestion].answer) {
             score++;
         } else {
             incorrectAnswers.push({
                 question: quizContent[currentQuestion].question,
-                incorrectAnswer: userAnswer,
-                correctAnswer: correctAnswer,
+                incorrectAnswer: answer,
+                correctAnswer: quizContent[currentQuestion].answer,
             });
         }
         currentQuestion++;
         selectedOption.checked = false;
-        showQuestion();
+        if (currentQuestion < quizContent.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
     }
 }
 
-// Updated function to display final results
+// Addition of display final results
 function showResult() {
     quizContainer.style.display = 'none';
     submitContainer.style.display = 'none';
@@ -193,7 +191,7 @@ function showResult() {
     resultsContainer.innerHTML = `Your score: ${score} out of ${quizContent.length}!`;
 }
 
-// Updated function to allow the user to retry the quiz
+// Addition of function to allow user to retry the quiz
 function retry() {
     currentQuestion = 0;
     score = 0;
@@ -207,7 +205,7 @@ function retry() {
     showQuestion();
 }
 
-// Updated function to display the answers for the questions the user got wrong
+// Addition of function to display the answers for the questions the user got wrong
 function revealAnswer() {
     quizContainer.style.display = 'none';
     submitContainer.style.display = 'none';
@@ -216,22 +214,19 @@ function revealAnswer() {
 
     let incorrectAnswersHtml = '';
     for (let i = 0; i < incorrectAnswers.length; i++) {
-        const userAnswer = incorrectAnswers[i].incorrectAnswer;
-        const correctAnswer = incorrectAnswers[i].correctAnswer;
-
         incorrectAnswersHtml += `
-        <p>
-            <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
-            <strong>Your Answer:</strong> ${userAnswer}<br>
-            <strong>Correct Answer:</strong> ${correctAnswer}
-        </p>
-        `;
+      <p>
+        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
+        <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
+        <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
+      </p>
+    `;
     }
 
     resultsContainer.innerHTML = `
-        <p>Your score: ${score} out of ${quizContent.length}</p>
-        <p>Wrong Answers:</p>
-        ${incorrectAnswersHtml}
+    <p>Your score: ${score} out of ${quizContent.length}</p>
+    <p>Wrong Answers:</p>
+    ${incorrectAnswersHtml}
     `;
 }
 
@@ -240,24 +235,5 @@ submitContainer.addEventListener('click', answerCheck);
 tryAgainContainer.addEventListener('click', retry);
 revealAnswerContainer.addEventListener('click', revealAnswer);
 
-// Function to start the quiz
-function startQuiz() {
-    // Hide the landing page
-    landingPage.style.display = 'none';
-
-    // Show the quiz container and the "Next Question" button
-    quizContainer.style.display = 'block';
-    submitContainer.style.display = 'inline-block';
-
-    // Start the quiz from the first question
-    showQuestion();
-}
-
-// Event listener for the "Start" button on the landing page
-const startButton = document.getElementById('startQuiz');
-startButton.addEventListener('click', startQuiz);
-
-// Shuffle questions before starting the quiz
-shuffleQuestions();
-
-// Quiz begins with the landing page
+// Quiz begins with the first question displayed
+showQuestion();
