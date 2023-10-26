@@ -101,6 +101,14 @@ const quizContent =[
         answer: '19th Amendment',
     },
 ];
+
+// Variable refrences container for quiz
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitContainer = document.getElementById('submit');
+const tryAgainContainer = document.getElementById('tryAgain');
+const revealAnswerContainer = document.getElementById('revealAnswer');
+
 // Track of the current question being displayed in the quiz
 let currentQuestion = 0;
 
@@ -109,12 +117,6 @@ let score = 0;
 
 // Collate details of incorrect answers
 let incorrectAnswers = [];
-
-const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const submitContainer = document.getElementById('submit');
-const tryAgainContainer = document.getElementById('tryAgain');
-const revealAnswerContainer = document.getElementById('revealAnswer');
 
 // Function to display the questions and answers
 function showQuestion() {
@@ -167,37 +169,53 @@ function answerCheck() {
         if (currentQuestion < quizContent.length) {
             showQuestion();
         } else {
-            showResults();
+            showResult();
         }
     }
 }
-
-
-// Addition of function to check the answer provided and to track scores
-function showResults () {
-    quizContainer.style.display = 'none';
-    submitContainer.style.display ='none';
-    revealAnswerContainer.style.display ='innline-block';
-    tryAgainContainer.style.display= 'inline-block';
-}
-// Addition of function to display the answers for the questions the user got wrong
-function revealAnswer() {
+// Addition of display final results
+function displayResult() {
     quizContainer.style.display = 'none';
     submitContainer.style.display = 'none';
-    revealAnswerContainer.style.display = 'none';
+    revealAnswerContainer.style.display = 'inline-block';
     tryAgainContainer.style.display = 'inline-block';
+    resultsContainer.innerHTML = 'Your Score: ${score} out of ${quizContent.length}!';
+    }
 
-// Addition of function to display the final result
-function 
 // Addition of function to allow user to retry the quiz
 function retry() {
     quizContainer.style.display = 'block';
     submitContainer.style.display = 'inline-block';
-    revealAnswerContainer = 'none';
+    revealAnswerContainer.style.display = 'none';
     tryAgainContainer.style.display = 'none';
     resultsContainer.innerHTML = '';
-    showQuestion ();
+    showQuestion();
+}
+
+// Addition of function to display the answers for the questions the user got wrong
+function revealAnswer() {
+    quizContainer.style.display = 'none';
+    submitContainer.style display = 'none';
+    revealAnswerContainer.style.display = 'none';
+    tryAgainContainer.style.display = 'inline-block';
+
+    let incorrectAnswersHtml = '';
+    for (let i = 0; i < incorrectAnswers.length; i++) {
+        incorrectAnswersHtml += `
+      <p>
+        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
+        <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
+        <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
+      </p>
+    `;
     }
+
+    resultsContainer.innerHTML = `
+    <p>Your score: ${score} out of ${quizContent.length}!</p>
+    <p>Wrong Answers:</p>
+    ${incorrectAnswersHtml}
+    `;
+} 
 
 // Event listners for buttons
 submitContainer.addEventListener('click', answerCheck);
