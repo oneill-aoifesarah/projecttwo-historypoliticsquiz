@@ -1,16 +1,16 @@
 # The History & Politics Quiz
 
-![The history and politics quiz mockup images](assets/images/websitemockups-devices.png)
+![The History and Politics quiz mockup images](assets/images/websitemockups-devices.png)
 
 The History & Politics Quiz is a website for quiz enthusiasts. The quiz takes users on an exciting journey through the annals of history and the intricate world of politics. In this quiz, users can delve deep into the past and explore the complexities of the political landscape. From ancient civilizations to modern democracies, from influential leaders to groundbreaking movements, this quiz will test the users knowledge and challenge their understanding of the forces that have shaped the world.
 
 This quiz presents ten multiple choice questions, allowing the user to choose from the selection of availble answers - only one of which is the correct answer. At the end of the quiz, the user has the opportunity to avail of feedback to see what answers they may have answered incorrectly and the 'Try Again' provides them with the option to retry the quiz, upon selection of which the questions are reshuffled so as to present the user with a new and exciting challenge.
 
-Visit the deployed website [here](https://josswe26.github.io/pura-vida-spa/).
+Visit the deployed quiz website [here](https://oneill-aoifesarah.github.io/projecttwo-historypoliticsquiz/).
 
 ## Table of Contents
 
-- [The History \& Politics Quiz](#the-history--politics-quiz)
+- [The History & Politics Quiz](#the-history-and-politics-quiz)
   - [Table of Contents](#table-of-contents)
   - [User Experience (UX)](#user-experience-ux)
     - [Project Goals](#project-goals)
@@ -20,10 +20,7 @@ Visit the deployed website [here](https://josswe26.github.io/pura-vida-spa/).
     - [Wireframes](#wireframes)
   - [Features](#features)
     - [General](#general)
-    - [Landing Page](#landing-page)
-    - [Treatments Page](#treatments-page)
-    - [Book Now Page](#book-now-page)
-    - [404 Error Page](#404-error-page)
+    - [Website Walkthrough](#website-walkthrough)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
@@ -33,7 +30,6 @@ Visit the deployed website [here](https://josswe26.github.io/pura-vida-spa/).
     - [Accessibility](#accessibility)
     - [Tools Testing](#tools-testing)
     - [Manual Testing](#manual-testing)
-  - [Finished Product](#finished-product)
   - [Deployment](#deployment)
     - [GitHub Pages](#github-pages)
   - [Credits](#credits)
@@ -48,125 +44,79 @@ Visit the deployed website [here](https://josswe26.github.io/pura-vida-spa/).
 
 ### Project Goals
 
-* The website should have a calming and relaxing design, appealing to the customers.
+* Engagement and Entertainment: Create a user-friendly quiz page that engages the user and provides them with an enjoyable experience.
 
-* Present the treatments offered and information about them in order to attract more customers.
+* Educational Value: Offer a selection of questions on key historical and political events from across the globe to impart knowledge and encourage the users learning.
 
-* Provide the customer with useful information that can facilitate future interaction with the business.
+* Content Quality: Develop high-quality and accurate quiz questions and answers, with thorough research and fact-checking, to provide valuable content to users.
 
-* Offer the customers the opportunity to book a treatment once they have decided to visit the business.
+* Mobile Responsiveness: Optimize the quiz page for mobile devices to reach a broader audience and provide a consistent experience across different platforms, so as to encourage users to revist the quiz in the future.
 
 ### User Stories
 
-* As a customer, I want to be able to navigate the website intuitively and learn more about the business and treatments being offered.
+* User-Friendly Design: Users want an intuitive and easy-to-navigate design that allows them to start taking the quiz without confusion.
 
-* As a customer, I want to be able to read more about the treatments available.
+* Mobile Responsiveness: Many users access content on their mobile devices, so a responsive design that works well on smartphones and tablets is crucial.
 
-* As a customer, I want to easily find the contact information for the business.
+* Engaging Content: Users look for interesting and well-crafted quiz questions that challenge their knowledge and keep them engaged.
 
-* As a customer, I want to find social media links to the business.
+* Feedback and Scoring: Immediate feedback on the users quiz performance, including scores and details of incorrect answers, is important for users to gauge their knowledge and progress.
 
-* As a customer, I want to be able to book a treatment directly from the website.
+* Fast Loading Times: Users expect the quiz page to load quickly to avoid frustration or abandonment.
 
-* As a customer, I want to easily find the business' location.
+* Visual Appeal: Users are more likely to engage with a quiz that has an attractive and visually appealing design.
 
 ### Color Scheme
-![Color scheme image](assets/readme-files/color-scheme.png)
+![Color scheme image](/assets/images/colorscheme%20-%20colorhunt.png)
 
-The colors used in the site are two different tones of green (#e2ecba and #454720), a brown color (#784834) for the hover effects and a blue green color (#133944) for the main text. These colors are chosen to represent the rain forest surrounding the business and are used in order to communicate a sense of calm and relaxation.
+The color palette utilised for site was chosen to ensure the content complemented the background image and to ensure the background image did not distract from the primary content of the webpages. The color palette, reperesnted by white; blue; and orange shades envokes feelings of calm, happiness, and purity. To ensure the colors stood out from the background image, some adaption to the color pallette were made to ensure text and content stood out and was presented in a clean, legible, and accesible manner.For the container background, a white color (#FFFDFB) was utilised; for the quiz title and buttons, a blue colour (#0881A3) was utilised; for the questions, and orange color was utilised (#f49c31); and for the button hover, a darker shade of blue (#276396) was utilised to ensure the hover fucntion was visible to the user. 
 
 ### Typography
 
-The main font used in the site is Raleway, with Sans Serif as the fallback font in case Ralway is not being imported correctly. Cabin is used for the headings, as suggested by Google Fonts for appropriate pairings with Raleway, with Sans Serif as fallback. The Qahiri font has been chosen for the site logo with Sans Serif used again as fallback.
+The main font used in the site is Poppins, with Sans Serif as the backup font in the event the font is not functioning correctly. Lato is used for the headings, as suggested by Google Fonts for appropriate pairings with Poppins, with Sans Serif as the backup font.
 
 ### Wireframes
 
-[Balsamiq](https://balsamiq.com/) has been used to showcase the appearance of the site and display the placement of the different elements whitin the pages.
-
-Page | Desktop Version | Mobile Version
---- | --- | ---
-Index | ![Desktop index wireframe image](assets/wireframes/desktop-index.png) | ![Mobile index wireframe image](assets/wireframes/mobile-index.png)
-Treatments | ![Desktop treatments wireframe image](assets/wireframes/desktop-treatments.png) | ![Mobile treatments wireframe image](assets/wireframes/mobile-treatments.png)
-Book Now | ![Desktop book now wireframe image](assets/wireframes/desktop-book-now.png) | ![Mobile book now wireframe image](assets/wireframes/mobile-book-now.png)
-
-[Back to top ⇧](#pura-vida-spa)
-
+[Mockups](/assets/images/p2-mockupdesign.png) were utilised to draft the proposed approach to the development and design of the quiz. This was to ensure a visualisation of the project, the layout, and requirements to fuflil the project goals and objectives. The concept evolved during the course of development, however remained an essential tool to ensure the project remained within scope.
 
 ## Features
 
 ### General
 
-* Responsive design across all device sizes.
+* Responsive design to serve all device sizes.
 
-* Similar color scheme and design throughout all pages to effectively structure, categorise and present the information to the customers.
+* Similar color scheme, layout, and design throughout to effectively structure, categorise and present the information to the users in a clear and succint manner.
 
-* **Header**
-![Header image](assets/readme-files/header.png)
-    
-    - The header contains the business logo and fully responsive navigation bar positioned across the top of the screen.
 
-    - The business logo functions as a link to the landing page.
+### Website Walkthrough
 
-    - The navigation bar is identical in all pages and contains links to all pages to facilitate navigation across the site. It also has a hover effect that changes color to provide feedback to the customer for a better user experience.
+* **Question Page**
+![Main image](assets/images/questions-mockup.png)
 
-* **Footer**
-![Footer image](assets/readme-files/footer.png)
+    - The first question is presented and highlights the number which that question falls within the total number of available questions. The background image, which presents a squence of question marks, aligns with the purpose of the quiz page. The subsequent questions follow the same structure and format, with the exception of the question counter that changes as the user progresses through the quiz so as to count the number of questions remaining. 
 
-    - The footer includes a smaller version of the logo and link to the business' social media channels.
+* **Results Section**
+![Results image](assets/images/results-mockup.png)
 
-### Landing Page
+    - The results section, which is presented upon completion of the quiz, present the user with their total score; the opportunity to obtain further information on the answers submitted; and the opportunity to retry the quiz.
 
-* **Main Image**
-![Main image](assets/readme-files/main-image.png)
+* **Reveal Answer Section**
+![Reveal answer image](assets/images/wronganswers-mockup.png)
 
-    - The main image is designed to attract the customer's attention and represents the nature surrounding the business.
+  - The reveal answer section details the users total score; the questions which they answered incorrectly; the answer they provided to these questions; and the correct answers to the same. A scroll bar is available so that the user can scroll easily through their feedback should the wish to do so. At the end of the feedback, users are presented with an opportunity to retry the quiz.
 
-* **About Us Section**
-![About us section image](assets/readme-files/about-us.png)
+* **Try Again**
+  
+  - Upon selection of the try again button, the questions are shuffled to ensure the quiz remains engaging throughout and that the users are not faced with repeating the same sequence of questions again.
 
-    - Contains a text with information about the business as well as an eye-catching image.
-
-* **Contact Section**
-![Contact section image](assets/readme-files/contact.png)
-
-    - Contains a text with useful geographical information as well as contact details such as the business' physical address, email and phone number.
-
-### Treatments Page
-
-* **Treatment Sections**
-![Treatment section image](assets/readme-files/treatment-section-example.png)
-
-    - The treatment section contains an image to illustrate the respective treatment and a short text with an explanation of the treatment.
-
-    - A link to the book now page has been added to each section for easy navigation.
-
-    - Each treatment section is fully responsive and easy to replicate in case more treatments need to be added by the business.
-
-### Book Now Page
-
-* **Book Now Form**
-![Book now form image](assets/readme-files/book-now-form.png)
-
-    - The form allows the customer to book the desired treatment on a specific date directly from the business' website.
-
-* **Find Us Section**
-![Find us section image](assets/readme-files/find-us.png)
-
-    - This section displays a Google map of the business' geographical location. This allows the customers to easily find the location from their devices.
-
-### 404 Error Page
-![404 error page image](assets/readme-files/404-error-page.png)
-
-*  This single page is being shown in case the customer enters an incorrect address into the address bar. It contains a link to the landing page.
-
-[Back to top ⇧](#pura-vida-spa)
-
+[Back to top ⇧](#the-history-and-politics-quiz)
 
 ## Technologies Used
 
 ### Languages Used
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries and Programs Used
 
@@ -176,23 +126,11 @@ Book Now | ![Desktop book now wireframe image](assets/wireframes/desktop-book-no
 * [Font Awesome](https://fontawesome.com/)
      - Font Awesome was used throughout all pages to add icons in order to create a better visual experience for UX purposes.
 
-* [TinyPNG](https://tinypng.com/)
-    - TinyPNG was used to reduce the file size of the images for the website.
-
-* [GitPod](https://gitpod.io/)
-     - GitPod was used for writing code, committing, and then pushing to GitHub.
-
 * [GitHub](https://github.com/)
      - GitHub was used to store the project after pushing.
-
-* [Balsamiq](https://balsamiq.com/)
-     - Balsamiq was used to create the wireframes during the design phase of the project.
-
-* [Am I Responsive?](http://ami.responsivedesign.is/#)
-    - Am I Responsive was used in order to see responsive design throughout the process and to generate mockup imagery to be used.
-
-* [Responsive Design Checker](https://www.responsivedesignchecker.com/)
-    - Responsive Design Checker was used in the testing process to check responsiveness on various devices.
+  
+* [CodeAnywhere](https://app.codeanywhere.com/)
+    -  A cloud IDE platform was utilised for the code development and pushed to GitHub.
 
 * [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
     - Chrome DevTools was used during development process for code review and to test responsiveness.
@@ -203,87 +141,64 @@ Book Now | ![Desktop book now wireframe image](assets/wireframes/desktop-book-no
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
     - W3C CSS Validator was used to validate the CSS code.
 
-[Back to top ⇧](#pura-vida-spa)
+- [JSHint JavaScript Validator](https://jshint.com/)
+    - JSHint JavaScript Code Quality Tool was used to help detect error and potential code problems. 
 
 
 ## Testing
 
 ### Testing User Stories
 
-* As a customer, I want to be able to navigate the website intuitively and learn more about the business and treatments being offered.
+* User-Friendly Design: Users want an intuitive and easy-to-navigate design that allows them to start taking the quiz without confusion.
+    - As a user, the website offers an intuitive design and structure allowing the user to navigate the content easily.
 
-     - The website offers a intuitive structure for the customers to navigate and find the information they are looking for.
+* Mobile Responsiveness: Many users access content on their mobile devices, so a responsive design that works well on smartphones and tablets is crucial.
+    - As a user, the website is accesible, functionable, and maintains the integrity of its design on all screen sizes and devices.
 
-    - The navigation bar is clearly presented in all pages for the customers to find with ease and it is easily navigable.
+* Engaging Content: Users look for interesting and well-crafted quiz questions that challenge their knowledge and keep them engaged.
+    - As a user, the variety of questions from across the globe and spanning both historical events and modern political issues supports the users engagement and interest.
 
+* Feedback and Scoring: Immediate feedback on the users quiz performance, including scores and details of incorrect answers, is important for users to gauge their knowledge and progress.
+   - As a user, the questions counter allows the user to ascertain how many questions remain to be completed and the reveal answer option upon completion fo the quiz provides detailed feedback on the users progress in the quiz to support them in gaining further knowledge.
 
-* As a customer, I want to be able to read more about the treatments available.
+* Fast Loading Times: Users expect the quiz page to load quickly to avoid frustration or abandonment.
+  - As a user, the mutiple choice option and buttons contained therein allows the user a 'one click' option to seamlessly navigate through the quix.
 
-    - The treatments page presents all treatments available, each on their own section.
-
-    - Each treatment section contains useful information about the respective treatment.
-
-* As a customer, I want to easily find the contact information for the business.
-
-    - The landing page contains a clear contact section with all necessary business' contacts
-
-* As a customer, I want to find social media links to the business.
-
-    - The footer provides link to the business' social media channels.
-
-* As a customer, I want to be able to book a treatment directly from the website.
-
-    - The book now page provides a book now form for the customer to book and schedule their next treatment.
-
-* As a customer, I want to easily find the business' location.
-
-    - The book now page contains a find us section with a Google map of the business' geographical location.
+* Visual Appeal: Users are more likely to engage with a quiz that has an attractive and visually appealing design.
+  - As a user, the psychological response to the color scheme of white, blue, and orange evoke feelings of calm, happiness, energy, and peacefulness. The visual layout of the quiz ensures the content remains attractive and engaging to the user to support in their completion of the quiz.
 
 
 ### Code Validation
 
-* The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) services were used to validate all pages of the project in order to ensure there were no syntax errors.
+- The [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), and [JSHint JavaScript Validator](https://jshint.com/) services were used to validate all pages of the project in order to ensure there were no syntax errors.
 
-    - W3C Markup Validator found an error concerning headings not being included on the main and book now images. The section tag was replaced for a div tag to correct this. 
-    
-    - Another error found by W3C Markup Validator was concerning a percentage value used inside the iframe tag to declare the width property on the Book Now page. The width and height properties for the iframe were declared inside the CSS file instead.
+    - The W3C Markup Validator found a typo error in the a favicon link. The typo was removed from the tag to correct this.
+    [W3C Markup Validator Errors](assets/images/html-errors.2.png)
+    [W3C Markup Validator Pass](assets/images/html-passed.2.png)
 
-    -  W3C CSS Validator found no errors or warnings on my CSS.
+    -  The W3C CSS Validator found an error with the color code assigned to the container, noting a duplication which was not necessary. The typo was removed from the tag to correct this.
+    [W3C CSS Valisator Errors](assets/images/cssvalidator-errors.2.png)
+    [W3C CSS Validator Pass](assets/images/cssvalidator-passed.2.png)
+
+    - The JSHint JavaScript Validator found an error with the displayResult variable which had not been called. Upon review, the displayResult was incorrectly labellef and should have stated showResult. The code was ammended to correct this.
+    [JShint Javascript Validator Pass](assets/images/jshint-passed.2.png)
 
 ### Accessibility
 
-* Used Lighthouse in Chrome DevTools to confirm that the colors and fonts being used in throughout the website are easy to read and accessible.
+* Lighthouse in Chrome DevTools was used to verify the performance, accesibility and utilisation of best practice throughout
 
-* Lighthouse reports
+* Lighthouse report
 
-    - **Landing Page**
-
-    ![Lighthouse report for landing page image](assets/readme-files/lighthouse-report-index.png)
-
-    - **Treatments Page**
-
-    ![Lighthouse report for treatmenst page image](assets/readme-files/lighthouse-report-treatments.png)
-
-    - **Book Now Page**
-
-    ![Lighthouse report for book now page image](assets/readme-files/lighthouse-report-book-now.png)
-
-    - **404 Error Page**
-
-    ![Lighthouse report for book now page image](assets/readme-files/lighthouse-report-book-now.png)
+  ![Lighthouse report](assets/images/lighthousereport.png)
 
 ### Tools Testing
 
 * [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 
-    - Chrome DevTools was used during the development process to test, explore and modify HTML elements and CSS styles used in the project.
+    - Chrome DevTools was utilised consistently during the development process to test, explore and modify HTML elements and CSS styles used in the project.
 
 * Responsiveness
-    
-    - [Am I Responsive?](http://ami.responsivedesign.is/#) was used to check responsiveness of the site pages across different devices.
 
-    - [Responsive Design Checker](https://www.responsivedesignchecker.com/) was used to check responsiveness of the site pages on different screen sizes.
-    
     - Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
 
 ### Manual Testing
@@ -292,19 +207,13 @@ Book Now | ![Desktop book now wireframe image](assets/wireframes/desktop-book-no
 
     - The website has been tested on the following browsers:
 
-        - **Goolgle Chrome**
+        - **Google Chrome**
         
         No appearance, responsiveness nor functionality issues.
 
         - **Safari**
         
         No appearance, responsiveness nor functionality issues.
-
-        - **Mozilla Firefox**
-        
-        There was and issue with the appearance of the book buttons on the treatments page expanding all the width. This issue was corrected by changing the width property value from "fit-content" to "max-content".
-        
-        No responsiveness nor functionality issues.
 
         - **Microsoft Edge**
         
@@ -314,90 +223,56 @@ Book Now | ![Desktop book now wireframe image](assets/wireframes/desktop-book-no
 
     - The website has been tested on multiple devices, including:
 
-        - **MacBook Pro 15"**
+        - **MacBook Air"**
 
         No appearance, responsiveness nor functionality issues.
 
-        - **Dell Latitude 5300**
+        - **iPad Pro"**
 
         No appearance, responsiveness nor functionality issues.
 
-        - **iPad Pro 12.9"**
+        - **iPad Air"**
 
         No appearance, responsiveness nor functionality issues.
 
-        - **iPad Pro 10.5"**
-
-        No appearance, responsiveness nor functionality issues.
-
-        - **iPhone XR**
+        - **iPhone 13**
         
         No appearance, responsiveness nor functionality issues.
 
-        - **iPhone 7**
+        - **Samsung Galaxy S8**
 
         No appearance, responsiveness nor functionality issues.
 
-* Common Elements Testing
+ Common Elements Testing - All Pages
+- **Questions & Answer Choices**
+- Clicking on the answer will indicate the users selected answer
 
-    - All Pages
+- **Next Question**
+
+- Hovering on the buttong will trigger hover effect, highlighting the button in a darker shade of blue
+
+- Clicking on the button will bring the user to the next question
         
-        - **Header**
-
-            - Clicking on the main logo will bring the customer back to the landing page.
-
-        - **Navigation Bar**
-
-            - Hovering on the different navigation bar's links will trigger hover effect, highlighting the link for the customer.
-
-            - Clicking on the navigation bar's links will bring the customer to the specified page.
+- **Question Counter**
         
-        - **Footer**
+- The question counter highlights what number question the user is currently on and display the total count of questions contained within the quiz to support in the user progression and awareness of the remaining questions.
         
-            - Clicking on the social media links will open the specific website on a new tab.
-
-    - Treatments Page
-
-        - Hovering on the book button link on each treatment section will trigger hover effect, highlighting the button for the customer.
-
-        - Clicking on the book button link on each treatment section will bring the customer to the book now page.
-
-    - Book Now Page
-
-        - When filling out the book now form, the customer is required to complete all fields before submitting.
+- **Results**
+- The results section indicates the number of correct answers out of the total number of questions. Buttons are availble to select additional feedback in the form of reveal answers and also the option to retry the quiz
         
-        - Hovering over the book button will trigger hover effect, highlighting the button for the customer.
-
-        - Clicking and dragging on the map in the find us section will move the area shown on the map. 
+- **Show Answers** 
+- The show answer button reveal the total number of correct answers out of the total number of questions. It also details the incorrect answers, with the breakdown of question; answer given by the user; and the correct answer
+            
+- The Try Again button is located at the bottom of the incorrect answers content allowing th user to select it, whereby they will automatically be redirected to start the quiz again.
         
-        - Clicking the plus and minus buttons changes the zoom of the map.
-
-    - 404 Error Page
-
-        - Entering an incorrect address into the address bar will bring the customer back to the 404 error page.
-
-        - Hovering on the homepage link will trigger hover effect, increasing the font size of the link's text.
-
-        - Clicking on the homepage link will bring the customer back to the landing page.
-
-[Back to top ⇧](#pura-vida-spa)
-
-
-## Finished Product
-
-Page | Desktop version | Mobile version
---- | --- | ---
-Index | ![Desktop index page image](assets/readme-files/desktop-index.png) | ![Mobile index page image](assets/readme-files/mobile-index.png)
-Treatments | ![Desktop treatments page image](assets/readme-files/desktop-treatments.png) | ![Mobile treatments page image](assets/readme-files/mobile-treatments.png)
-Book Now | ![Desktop book now page image](assets/readme-files/desktop-book-now.png) | ![Mobile book now page image](assets/readme-files/mobile-book-now.png)
-404 Error | ![Desktop 404 error page image](assets/readme-files/desktop-404.png) | ![Mobile 404 error page image](assets/readme-files/mobile-404.png)
-
-[Back to top ⇧](#pura-vida-spa)
-
+- **Try Again**
+- The selection of the Try Again button brings the user back to the start to retry the quiz.
+           
+- Questions are automatically reshuffled so that the user is met with a different sequence of questions.    
 
 ## Deployment
 
-* This website was developed using [GitPod](https://www.gitpod.io/), which was then committed and pushed to GitHub using the GitPod terminal.
+- This website was developed using [CodeAnywhere](https://app.codeanywhere.com/), which was then committed and pushed to GitHub using the CodeAnywhere terminal.
 
 ### GitHub Pages
 
@@ -407,18 +282,25 @@ Book Now | ![Desktop book now page image](assets/readme-files/desktop-book-now.p
 
     2. At the top of the Repository, locate the Settings button on the menu.
 
-        - Alternatively click [here](https://raw.githubusercontent.com/) for a GIF demostration of the process.
-
     3. Scroll down the Settings page until you locate the Pages section.
 
-    4. Under Source, click the dropdown called None and select Master Branch.
+    4. Under Source, click the dropdown and select 'Deploy from Branch'.
 
-    5. The page will refresh automatically and generate a link to your website.
+    5. Under Branch, click the dropdown called 'None' and select 'Main'.
 
-[Back to top ⇧](#pura-vida-spa)
+    6. Refresh the page.
+    
+    7. Select 'Code', located at the top of the navbar.
+    
+    8. Select 'Deployments'
+    
+    9. Click to generated link to open your website. 
 
 
 ## Credits 
+
+[CodewithFaraz](https://www.codewithfaraz.com)
+[GeeksforGeeks](https://www.geeksforgeeks.org/)
 
 ### Content
 
@@ -426,34 +308,21 @@ Book Now | ![Desktop book now page image](assets/readme-files/desktop-book-now.p
 
 ### Media
 
-* [Pexels](https://www.pexels.com/)
+* [iSTOCK](https://www.istockphoto.com/)
 
-    - Main image: "Waterfalls in the Middle of Green Trees" by Austin Tsai.
-    - 404 Error Page image: Taken by Artem Beliaikin.
-
-* [Unsplash](https://unsplash.com/)
-
-    - About Us image: "Pristine water lily" by Jay Castor.
-    - Massage image: "Beautiful Woman Getting Stones Massage in Spa Salon" by Engin Akyurt.
-    - Facial image: Taken by Raphael Lovaski.
-    - Pedicure image: "Warm bath before treatment" by Rune Enstad.
-    - Book Now image: Taken by Firos Nv.
+    - Background image: "Question Mark on Speech Bubble".
 
 ### Code
 
-* [Stack Overflow](https://stackoverflow.com/) and [W3Schools](https://www.w3schools.com/) were consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.
+* [Stack Overflow](https://stackoverflow.com/) and [W3Schools](https://www.w3schools.com/) were consulted on a regular basis to better understand the code being implemented.
 
-[Back to top ⇧](#pura-vida-spa)
+[Back to top ⇧](#the-history-and-politics-quiz)
 
 
 ## Acknowledgements
 
-* My partner, for her unconditional love, help and support in all aspects of life to make possible for me to work on this project.
+* My tutor, Marcel, for his support and guidance.
 
-* My family, for their valuable opinions and and critic during the design and development process.
+* Code Institute and the Slack community for their ongoing support. 
 
-* My tutor, Marcel, for his invaluable feedback and guidance.
-
-* Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
-
-[Back to top ⇧](#pura-vida-spa)
+[Back to top ⇧](#the-history-and-politics-quiz)
