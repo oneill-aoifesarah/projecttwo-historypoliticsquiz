@@ -50,7 +50,7 @@ Visit the deployed quiz website [here](https://oneill-aoifesarah.github.io/proje
 
 * Content Quality: Develop high-quality and accurate quiz questions and answers, with thorough research and fact-checking, to provide valuable content to users.
 
-* Mobile Responsiveness: Optimize the quiz page for mobile devices to reach a broader audience and provide a consistent experience across different platforms, so as to encourage users to revist the quiz in the future.
+* Mobile Responsiveness: Optimize the quiz page for mobile devices to reach a broader audience and provide a consistent experience across different platforms, so as to encourage users to revisit the quiz in the future.
 
 ### User Stories
 
@@ -69,7 +69,7 @@ Visit the deployed quiz website [here](https://oneill-aoifesarah.github.io/proje
 ### Color Scheme
 ![Color scheme image](/assets/images/colorscheme%20-%20colorhunt.png)
 
-The color palette utilised for site was chosen to ensure the content complemented the background image and to ensure the background image did not distract from the primary content of the webpages. The color palette, reperesnted by white; blue; and orange shades envokes feelings of calm, happiness, and purity. To ensure the colors stood out from the background image, some adaption to the color pallette were made to ensure text and content stood out and was presented in a clean, legible, and accesible manner.For the container background, a white color (#FFFDFB) was utilised; for the quiz title and buttons, a blue colour (#0881A3) was utilised; for the questions, and orange color was utilised (#f49c31); and for the button hover, a darker shade of blue (#276396) was utilised to ensure the hover fucntion was visible to the user. 
+The color palette utilised for site was chosen to ensure the content complemented the background image and to ensure the background image did not distract from the primary content of the webpages. The color palette, represented by white; blue; and orange shades evokes feelings of calm, happiness, and purity. To ensure the colors stood out from the background image, some adaption to the color palette were made to ensure text and content stood out and was presented in a clean, legible, and accesible manner.For the container background, a white color (#FFFDFB) was utilised; for the quiz title and buttons, a blue colour (#0881A3) was utilised; for the questions, and orange color was utilised (#f49c31); and for the button hover, a darker shade of blue (#276396) was utilised to ensure the hover fucntion was visible to the user. 
 
 ### Typography
 
@@ -77,7 +77,7 @@ The main font used in the site is Poppins, with Sans Serif as the backup font in
 
 ### Wireframes
 
-[Mockups](/assets/images/p2-mockupdesign.png) were utilised to draft the proposed approach to the development and design of the quiz. This was to ensure a visualisation of the project, the layout, and requirements to fuflil the project goals and objectives. The concept evolved during the course of development, however remained an essential tool to ensure the project remained within scope.
+[Mockups](/assets/images/p2-mockupdesign.png) were utilised to draft the proposed approach to the development and design of the quiz. This was to ensure a visualisation of the project, the layout, and requirements to fulfill the project goals and objectives. The concept evolved during the course of development, however remained an essential tool to ensure the project remained within scope.
 
 ## Features
 
@@ -121,7 +121,7 @@ The main font used in the site is Poppins, with Sans Serif as the backup font in
 ### Frameworks, Libraries and Programs Used
 
 * [Google Fonts](https://fonts.google.com/)
-    - Google Fonts was used to import the fonts Raleway, Cabin and Qahiri into the style.css file. These fonts were used throughout the site.
+    - Google Fonts was used to import the fonts Lato, and Poppins into the style.css file. These fonts were used throughout the site.
 
 * [Font Awesome](https://fontawesome.com/)
      - Font Awesome was used throughout all pages to add icons in order to create a better visual experience for UX purposes.
@@ -159,10 +159,10 @@ The main font used in the site is Poppins, with Sans Serif as the backup font in
     - As a user, the variety of questions from across the globe and spanning both historical events and modern political issues supports the users engagement and interest.
 
 * Feedback and Scoring: Immediate feedback on the users quiz performance, including scores and details of incorrect answers, is important for users to gauge their knowledge and progress.
-   - As a user, the questions counter allows the user to ascertain how many questions remain to be completed and the reveal answer option upon completion fo the quiz provides detailed feedback on the users progress in the quiz to support them in gaining further knowledge.
+   - As a user, the questions counter allows the user to ascertain how many questions remain to be completed and the reveal answer option upon completion for the quiz provides detailed feedback on the users progress in the quiz to support them in gaining further knowledge.
 
 * Fast Loading Times: Users expect the quiz page to load quickly to avoid frustration or abandonment.
-  - As a user, the mutiple choice option and buttons contained therein allows the user a 'one click' option to seamlessly navigate through the quix.
+  - As a user, the mutiple choice option and buttons contained therein allows the user a 'one click' option to seamlessly navigate through the quiz.
 
 * Visual Appeal: Users are more likely to engage with a quiz that has an attractive and visually appealing design.
   - As a user, the psychological response to the color scheme of white, blue, and orange evoke feelings of calm, happiness, energy, and peacefulness. The visual layout of the quiz ensures the content remains attractive and engaging to the user to support in their completion of the quiz.
@@ -172,7 +172,7 @@ The main font used in the site is Poppins, with Sans Serif as the backup font in
 
 - The [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), and [JSHint JavaScript Validator](https://jshint.com/) services were used to validate all pages of the project in order to ensure there were no syntax errors.
 
-    - The W3C Markup Validator found a typo error in the a favicon link. The typo was removed from the tag to correct this.
+    - The W3C Markup Validator found a typo error in the favicon link. The typo was removed from the tag to correct this.
     [W3C Markup Validator Errors](assets/images/html-errors.2.png)
     [W3C Markup Validator Pass](assets/images/html-passed.2.png)
 
@@ -249,7 +249,7 @@ The main font used in the site is Poppins, with Sans Serif as the backup font in
 
 - **Next Question**
 
-- Hovering on the buttong will trigger hover effect, highlighting the button in a darker shade of blue
+- Hovering on the button will trigger hover effect, highlighting the button in a darker shade of blue
 
 - Clicking on the button will bring the user to the next question
         
@@ -263,7 +263,7 @@ The main font used in the site is Poppins, with Sans Serif as the backup font in
 - **Show Answers** 
 - The show answer button reveal the total number of correct answers out of the total number of questions. It also details the incorrect answers, with the breakdown of question; answer given by the user; and the correct answer
             
-- The Try Again button is located at the bottom of the incorrect answers content allowing th user to select it, whereby they will automatically be redirected to start the quiz again.
+- The Try Again button is located at the bottom of the incorrect answers content allowing the user to select it, whereby they will automatically be redirected to start the quiz again.
         
 - **Try Again**
 - The selection of the Try Again button brings the user back to the start to retry the quiz.
